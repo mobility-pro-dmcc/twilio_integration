@@ -1,0 +1,30 @@
+[project]
+name = "twilio_integration"
+authors = [
+    { name = "Mobility Pro DMCC", email = "contact@mobilitypro.ae" }
+]
+description = "Twilio Integration for Frappe"
+requires-python = ">=3.10"
+dynamic = ["version"]
+dependencies = [
+    # Twilio official SDK
+    "twilio>=9.0.0",
+    # Helper for phonenumbers (optional but recommended for Twilio)
+    "phonenumbers"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest"
+]
+
+[tool.bench.frappe-dependencies]
+frappe = ">=15.0.0,<16.0.0"
+
+[build-system]
+requires = ["flit_core >=3.4,<4"]
+build-backend = "flit_core.buildapi"
+
+# Frappe specific configuration
+[tool.bench]
+apps = ["twilio_integration"]
