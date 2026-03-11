@@ -9,6 +9,7 @@ dynamic = ["version"]
 dependencies = [
     # Twilio official SDK
     "twilio>=9.0.0",
+    "pyngrok~=5.1.0",
     # Helper for phonenumbers (optional but recommended for Twilio)
     "phonenumbers"
 ]
