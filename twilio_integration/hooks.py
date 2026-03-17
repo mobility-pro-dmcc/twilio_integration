@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from . import __version__ as app_version
-from .overrides.Sales_invoice import monkey_patch_notifications
-monkey_patch_notifications()
 
 app_name = "twilio_integration"
 app_title = "Twilio Integration"
